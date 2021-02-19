@@ -3,6 +3,12 @@
 	<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-purple.svg" alt="MIT License Badge"></a>
 </p>
 
+</p>
+<p align = "center">
+<a href="https://pub.dev/packages/scaled_list"> Pub dev</a>
+</p>
+
+
 # Scaled List
 A Horizontal List view With Lots of modification including a scaled current item.
 - Provided with curved custom painting and Dots indictor below it.
@@ -14,7 +20,6 @@ A Horizontal List view With Lots of modification including a scaled current item
 	<img src="https://i.imgur.com/uB58pWN.png" alt="Image" height="500"/>
 	<img src="https://i.imgur.com/H0ObOwf.png" alt="Image" height="500"/>	
 	
-</p>
 
 ## Usage
 
