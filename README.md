@@ -58,7 +58,7 @@ A Horizontal List view With Lots of modification including a scaled current item
   ```
   
 ## Usage Scenarios
-- When You like to add items in scaled manner and add custom curved painting over each item ;
+- When You like to add items in scaled manner and add custom curved painting over each item.
 
 ## Contributers
 <a href="https://github.com/MuhammadAlsaied"> Muhammad Alsaied</a>
