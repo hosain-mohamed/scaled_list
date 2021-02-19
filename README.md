@@ -1,5 +1,5 @@
 <p align="center">
-	<a href="https://github.com/hosain-mohamed"><img src="https://img.shields.io/pub/v/focus_detector.svg" alt="Pub.dev Badge"></a>
+	<a href="https://pub.dev/packages/scaled_list"><img src="https://img.shields.io/pub/v/focus_detector.svg" alt="Pub.dev Badge"></a>
 	<a href="https://github.com/hosain-mohamed"><img src="https://badges.gitter.im/focus_detector/community.svg" alt="Gitter Badge"></a>
 	<a href="https://github.com/tenhobi/effective_dart"><img src="https://img.shields.io/badge/style-effective_dart-40c4ff.svg" alt="Effective Dart Badge"></a>
 	<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-purple.svg" alt="MIT License Badge"></a>
