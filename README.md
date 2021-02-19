@@ -13,7 +13,7 @@
 A Horizontal List view With Lots of modification including a scaled current item.
 - Provided with curved custom painting and Dots indictor below it.
 - it makes the widget of item builder responsive to the device screen's width and height.
-- You can also set the  relative width , margin width , height of selected and unselected Card to the entire screen
+- You can also set the  relative width, margin width, height of selected and unselected Card to the entire screen
 
 <p align="center">
 	<img src="https://i.imgur.com/a40bkMu.png" alt="Image" height="500"/>
