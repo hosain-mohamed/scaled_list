@@ -119,50 +119,48 @@ class _ScaledListState extends State<ScaledList> {
                     if (index == 0) ...[
                       SizedBox(width: parentWidth * widget.marginWidthRatio),
                     ],
-                    Center(
-                      child: Stack(
-                        children: [
-                          Container(
-                            width: parentWidth * widget.cardWidthRatio,
-                            height: _selectedIndex == index
-                                ? widget.selectedCardHeightRatio * parentHeight
-                                : widget.unSelectedCardHeightRatio *
-                                    parentHeight,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 10,
-                                  offset: Offset(0, 7),
-                                  color:
-                                      widget.itemColor(index).withOpacity(0.7),
-                                )
-                              ],
-                              borderRadius: BorderRadius.circular(20),
-                              color: widget.itemColor(index),
-                            ),
+                    Stack(
+                      children: [
+                        Container(
+                          width: parentWidth * widget.cardWidthRatio,
+                          height: _selectedIndex == index
+                              ? widget.selectedCardHeightRatio * parentHeight
+                              : widget.unSelectedCardHeightRatio *
+                                  parentHeight,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                blurRadius: 10,
+                                offset: Offset(0, 7),
+                                color:
+                                    widget.itemColor(index).withOpacity(0.7),
+                              )
+                            ],
+                            borderRadius: BorderRadius.circular(20),
+                            color: widget.itemColor(index),
                           ),
-                          Positioned(
-                              right: 0,
-                              bottom: 0,
-                              top: 0,
-                              child: CustomPaint(
-                                size: Size(
-                                  parentWidth * widget.cardWidthRatio,
-                                  _selectedIndex == index
-                                      ? widget.selectedCardHeightRatio *
-                                          parentHeight
-                                      : widget.unSelectedCardHeightRatio *
-                                          parentHeight,
-                                ),
-                                painter: CustomCardPainter(
-                                    radius: 20,
-                                    startColor: widget.itemColor(index),
-                                    endColor: widget.itemColor(index)),
-                              )),
-                          Positioned.fill(
-                              child: widget.itemBuilder(index, _selectedIndex))
-                        ],
-                      ),
+                        ),
+                        Positioned(
+                            right: 0,
+                            bottom: 0,
+                            top: 0,
+                            child: CustomPaint(
+                              size: Size(
+                                parentWidth * widget.cardWidthRatio,
+                                _selectedIndex == index
+                                    ? widget.selectedCardHeightRatio *
+                                        parentHeight
+                                    : widget.unSelectedCardHeightRatio *
+                                        parentHeight,
+                              ),
+                              painter: CustomCardPainter(
+                                  radius: 20,
+                                  startColor: widget.itemColor(index),
+                                  endColor: widget.itemColor(index)),
+                            )),
+                        Positioned.fill(
+                            child: widget.itemBuilder(index, _selectedIndex))
+                      ],
                     ),
                     SizedBox(width: parentWidth * widget.marginWidthRatio)
                   ],
