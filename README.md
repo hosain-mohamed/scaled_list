@@ -11,6 +11,12 @@ A Horizontal List view With Lots of modification including a scaled current item
 - it makes the widget of item builder responsive to the device screen's width and height.
 - You can also set the  relative width , margin width , height of selected and unselected Card to the entire screen
 
+<p align="center">
+	<img src="example/screenshots/screenshot_1.png" alt="Image" height="500"/>
+	<img src="example/screenshots/screenshot_2.png" alt="Image" height="500"/>
+	<img src="example/screenshots/screenshot_3.png" alt="Image" height="500"/>
+	
+</p>
 
 ## Usage
 
