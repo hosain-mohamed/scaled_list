@@ -1,3 +1,3 @@
-## [1.0.0] - TODO: Add release date.
+## [1.0.0] - 19/2/2021.
 
-* TODO: Describe initial release.
+Create a scaled list fot card items.

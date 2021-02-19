@@ -3,6 +3,7 @@ description:  A Horizontal List view With Lots of modification including the a s
 
 version: 1.0.0
 homepage: https://github.com/hosain-mohamed/scaled_list
+repository : https://github.com/hosain-mohamed/scaled_list
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
