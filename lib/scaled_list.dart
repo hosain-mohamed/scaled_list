@@ -101,84 +101,97 @@ class _ScaledListState extends State<ScaledList> {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      parentWidth = constraints.maxWidth;
-      parentHeight = constraints.maxHeight;
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            height: parentHeight * 0.45,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: widget.itemCount,
-              controller: _scrollController,
-              itemBuilder: (context, index) {
-                return Row(
-                  children: [
-                    if (index == 0) ...[
-                      SizedBox(width: parentWidth * widget.marginWidthRatio),
-                    ],
-                    Stack(
+    return Container(
+      child: LayoutBuilder(builder: (context, constraints) {
+        parentWidth = constraints.maxWidth;
+        parentHeight = constraints.maxHeight;
+        if (parentHeight == double.infinity) {
+          final mediaQuery = MediaQuery.of(context);
+          parentHeight = mediaQuery.size.height;
+        }
+        return Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                height: parentHeight * 0.45,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: widget.itemCount,
+                  controller: _scrollController,
+                  itemBuilder: (context, index) {
+                    return Row(
                       children: [
-                        Container(
-                          width: parentWidth * widget.cardWidthRatio,
-                          height: _selectedIndex == index
-                              ? widget.selectedCardHeightRatio * parentHeight
-                              : widget.unSelectedCardHeightRatio *
-                                  parentHeight,
-                          decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 10,
-                                offset: Offset(0, 7),
-                                color:
-                                    widget.itemColor(index).withOpacity(0.7),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(20),
-                            color: widget.itemColor(index),
-                          ),
-                        ),
-                        Positioned(
-                            right: 0,
-                            bottom: 0,
-                            top: 0,
-                            child: CustomPaint(
-                              size: Size(
-                                parentWidth * widget.cardWidthRatio,
-                                _selectedIndex == index
-                                    ? widget.selectedCardHeightRatio *
-                                        parentHeight
-                                    : widget.unSelectedCardHeightRatio *
-                                        parentHeight,
+                        if (index == 0) ...[
+                          SizedBox(
+                              width: parentWidth * widget.marginWidthRatio),
+                        ],
+                        Stack(
+                          children: [
+                            Container(
+                              width: parentWidth * widget.cardWidthRatio,
+                              height: _selectedIndex == index
+                                  ? widget.selectedCardHeightRatio *
+                                      parentHeight
+                                  : widget.unSelectedCardHeightRatio *
+                                      parentHeight,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 10,
+                                    offset: Offset(0, 7),
+                                    color: widget
+                                        .itemColor(index)
+                                        .withOpacity(0.7),
+                                  )
+                                ],
+                                borderRadius: BorderRadius.circular(20),
+                                color: widget.itemColor(index),
                               ),
-                              painter: CustomCardPainter(
-                                  radius: 20,
-                                  startColor: widget.itemColor(index),
-                                  endColor: widget.itemColor(index)),
-                            )),
-                        Positioned.fill(
-                            child: widget.itemBuilder(index, _selectedIndex))
+                            ),
+                            Positioned(
+                                right: 0,
+                                bottom: 0,
+                                top: 0,
+                                child: CustomPaint(
+                                  size: Size(
+                                    parentWidth * widget.cardWidthRatio,
+                                    _selectedIndex == index
+                                        ? widget.selectedCardHeightRatio *
+                                            parentHeight
+                                        : widget.unSelectedCardHeightRatio *
+                                            parentHeight,
+                                  ),
+                                  painter: CustomCardPainter(
+                                      radius: 20,
+                                      startColor: widget.itemColor(index),
+                                      endColor: widget.itemColor(index)),
+                                )),
+                            Positioned.fill(
+                                child:
+                                    widget.itemBuilder(index, _selectedIndex))
+                          ],
+                        ),
+                        SizedBox(width: parentWidth * widget.marginWidthRatio)
                       ],
-                    ),
-                    SizedBox(width: parentWidth * widget.marginWidthRatio)
-                  ],
-                );
-              },
-            ),
+                    );
+                  },
+                ),
+              ),
+              if (widget.showDots) ...[
+                SizedBox(height: parentHeight * 0.015),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: List.generate(
+                      widget.itemCount, (index) => buildDot(index)),
+                ),
+              ]
+            ],
           ),
-          if (widget.showDots) ...[
-            SizedBox(height: parentHeight * 0.015),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:
-                  List.generate(widget.itemCount, (index) => buildDot(index)),
-            ),
-          ]
-        ],
-      );
-    });
+        );
+      }),
+    );
   }
 
   Widget buildDot(int index) {
