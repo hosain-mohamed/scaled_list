@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scaled_list/scaled_list.dart';
 import 'data.dart';
-import 'sizeConfig.dart';
-
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,18 +19,18 @@ class HomePage extends StatelessWidget {
                 children: [
                   Container(
                     height: selectedIndex == index
-                        ? getRelativeHeight(0.14)
-                        : getRelativeHeight(0.11),
+                        ? 100
+                        : 80,
                     child: Image.asset(category.image),
                   ),
-                  SizedBox(height: getRelativeHeight(0.015)),
+                  SizedBox(height: 15),
                   Text(
                     category.name,
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: selectedIndex == index
-                            ? getRelativeWidth(0.06)
-                            : getRelativeWidth(0.05)),
+                            ? 25
+                            : 20),
                   )
                 ],
               );

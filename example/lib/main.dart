@@ -1,4 +1,3 @@
-import 'sizeConfig.dart';
 import 'package:flutter/material.dart';
 
 import 'home_page.dart';
@@ -17,11 +16,6 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: Builder(
-          builder: (context) {
-            SizeConfig.initSize(context);
-            return HomePage();
-          },
-        ));
+        home: HomePage());
   }
 }
