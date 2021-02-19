@@ -61,5 +61,5 @@ A Horizontal List view With Lots of modification including a scaled current item
 - When You like to add items in scaled manner and add custom curved painting over each item.
 
 ## Contributers
-<a href="https://github.com/MuhammadAlsaied"> Muhammad Alsaied</a>
 <a href="https://github.com/hosain-mohamed"> Hosain Mohamed</a>
+<a href="https://github.com/MuhammadAlsaied"> Muhammad Alsaied</a>
