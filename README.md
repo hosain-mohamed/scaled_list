@@ -1,6 +1,4 @@
 <p align="center">
-	<a href="https://github.com/hosain-mohamed"><img src="https://img.shields.io/pub/v/focus_detector.svg" alt="Pub.dev Badge"></a>
-	<a href="https://github.com/hosain-mohamed"><img src="https://badges.gitter.im/focus_detector/community.svg" alt="Gitter Badge"></a>
 	<a href="https://github.com/tenhobi/effective_dart"><img src="https://img.shields.io/badge/style-effective_dart-40c4ff.svg" alt="Effective Dart Badge"></a>
 	<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-purple.svg" alt="MIT License Badge"></a>
 </p>
@@ -61,5 +59,5 @@ A Horizontal List view With Lots of modification including a scaled current item
 - When You like to add items in scaled manner and add custom curved painting over each item.
 
 ## Contributers
-<a href="https://github.com/MuhammadAlsaied"> Muhammad Alsaied</a>
 <a href="https://github.com/hosain-mohamed"> Hosain Mohamed</a>
+<a href="https://github.com/MuhammadAlsaied"> Muhammad Alsaied</a>
