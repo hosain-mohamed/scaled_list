@@ -12,9 +12,9 @@ A Horizontal List view With Lots of modification including a scaled current item
 - You can also set the  relative width , margin width , height of selected and unselected Card to the entire screen
 
 <p align="center">
-	<img src="example/screenshots/screenshot_1.png" alt="Image" height="500"/>
-	<img src="example/screenshots/screenshot_2.png" alt="Image" height="500"/>
-	<img src="example/screenshots/screenshot_3.png" alt="Image" height="500"/>
+	<img src="https://i.imgur.com/a40bkMu.png" alt="Image" height="500"/>
+	<img src="https://i.imgur.com/uB58pWN.png" alt="Image" height="500"/>
+	<img src="https://i.imgur.com/H0ObOwf.png" alt="Image" height="500"/>	
 	
 </p>
 
@@ -58,7 +58,7 @@ A Horizontal List view With Lots of modification including a scaled current item
   ```
   
 ## Usage Scenarios
-- When You like to add items in scaled manner and add custom curved painting over each item ;
+- When You like to add items in scaled manner and add custom curved painting over each item.
 
 ## Contributers
 <a href="https://github.com/MuhammadAlsaied"> Muhammad Alsaied</a>
