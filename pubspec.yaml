@@ -1,7 +1,7 @@
 name: scaled_list
 description:  A Horizontal List view With Lots of modification including the a scaled current item, curved custom painting and a dots indictor below it. it makes the widget of item builder responsive to the device screen's width and height, You can also set the relative width, margin width, height of selected and unselected Card to the entire screen.
 
-version: 1.0.0+2
+version: 1.0.0+3
 homepage: https://github.com/hosain-mohamed/scaled_list
 repository : https://github.com/hosain-mohamed/scaled_list
 
