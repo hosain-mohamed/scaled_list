@@ -13,9 +13,7 @@ A Horizontal List view With Lots of modification including a scaled current item
 
 <p align="center">
 	<img src="example/screenshots/screenshot_1.png" alt="Image" height="500"/>
-	<img src="example/screenshots/screenshot_2.png" alt="Image" height="500"/>
-	<img src="example/screenshots/screenshot_3.png" alt="Image" height="500"/>
-	
+	<img src="example/screenshots/screenshot_2.png" alt="Image" height="500"/>	
 </p>
 
 ## Usage
