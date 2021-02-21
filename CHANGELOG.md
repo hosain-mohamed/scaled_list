@@ -1,4 +1,4 @@
-## [1.0.1] - 21/2/2021.
+## [1.0.1+6] - 21/2/2021.
 
 Update ChangeLog and Yaml description.
 
