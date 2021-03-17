@@ -5,7 +5,7 @@
 
 </p>
 <p align = "center">
-<a href="https://pub.dev/packages/curved_splash_screen"> Pub.dev</a>
+<a href="https://pub.dev/packages/scaled_list"> Pub.dev</a>
 </p>
 
 
