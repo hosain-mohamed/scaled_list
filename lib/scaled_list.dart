@@ -11,10 +11,10 @@ import 'package:flutter/rendering.dart';
 /// You can also set the  relative width , margin width , height of selected and unselected Card to the entire screen
 class ScaledList extends StatefulWidget {
   const ScaledList({
-    Key key,
-    @required this.itemBuilder,
-    @required this.itemCount,
-    @required this.itemColor,
+    Key? key,
+    required this.itemBuilder,
+    required this.itemCount,
+    required this.itemColor,
     this.showDots = true,
     this.cardWidthRatio = 0.6,
     this.marginWidthRatio = 0.1,
@@ -61,19 +61,19 @@ class ScaledList extends StatefulWidget {
 }
 
 class _ScaledListState extends State<ScaledList> {
-  ScrollController _scrollController;
+  ScrollController? _scrollController;
   int _selectedIndex = 0;
 
-  double parentWidth;
-  double parentHeight;
+  late double parentWidth;
+  double? parentHeight;
 
   @override
   void initState() {
     _scrollController = ScrollController();
     final double fullCardWidth =
         widget.cardWidthRatio + widget.marginWidthRatio;
-    _scrollController.addListener(() {
-      final double offset = _scrollController.offset;
+    _scrollController!.addListener(() {
+      final double offset = _scrollController!.offset;
       double deltaReverse =
           (((_selectedIndex + 2) * fullCardWidth) - 1) * parentWidth;
 
@@ -82,14 +82,14 @@ class _ScaledListState extends State<ScaledList> {
               parentWidth;
 
       if (offset > deltaReverse &&
-          _scrollController.position.userScrollDirection ==
+          _scrollController!.position.userScrollDirection ==
               ScrollDirection.reverse) {
         setState(() {
           _selectedIndex += 1;
         });
       }
       if (offset < deltaForward &&
-          _scrollController.position.userScrollDirection ==
+          _scrollController!.position.userScrollDirection ==
               ScrollDirection.forward) {
         setState(() {
           _selectedIndex -= 1;
@@ -115,7 +115,7 @@ class _ScaledListState extends State<ScaledList> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                height: parentHeight * 0.45,
+                height: parentHeight! * 0.45,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: widget.itemCount,
@@ -133,9 +133,9 @@ class _ScaledListState extends State<ScaledList> {
                               width: parentWidth * widget.cardWidthRatio,
                               height: _selectedIndex == index
                                   ? widget.selectedCardHeightRatio *
-                                      parentHeight
+                                      parentHeight!
                                   : widget.unSelectedCardHeightRatio *
-                                      parentHeight,
+                                      parentHeight!,
                               decoration: BoxDecoration(
                                 boxShadow: [
                                   BoxShadow(
@@ -159,9 +159,9 @@ class _ScaledListState extends State<ScaledList> {
                                     parentWidth * widget.cardWidthRatio,
                                     _selectedIndex == index
                                         ? widget.selectedCardHeightRatio *
-                                            parentHeight
+                                            parentHeight!
                                         : widget.unSelectedCardHeightRatio *
-                                            parentHeight,
+                                            parentHeight!,
                                   ),
                                   painter: CustomCardPainter(
                                       radius: 20,
@@ -180,7 +180,7 @@ class _ScaledListState extends State<ScaledList> {
                 ),
               ),
               if (widget.showDots) ...[
-                SizedBox(height: parentHeight * 0.015),
+                SizedBox(height: parentHeight! * 0.015),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
@@ -197,7 +197,7 @@ class _ScaledListState extends State<ScaledList> {
   Widget buildDot(int index) {
     return AnimatedContainer(
       duration: Duration(milliseconds: 300),
-      height: parentHeight * 0.01,
+      height: parentHeight! * 0.01,
       margin: EdgeInsets.all(parentWidth * 0.01),
       width: _selectedIndex == index ? parentWidth * 0.05 : parentWidth * 0.015,
       decoration: BoxDecoration(
@@ -215,9 +215,9 @@ class CustomCardPainter extends CustomPainter {
   final double radius;
 
   CustomCardPainter({
-    @required this.startColor,
-    @required this.endColor,
-    @required this.radius,
+    required this.startColor,
+    required this.endColor,
+    required this.radius,
   });
   @override
   void paint(Canvas canvas, Size size) {

@@ -1,3 +1,7 @@
+## [2.0.0] - 8/6/2022.
+
+Migrating to null-saftey.
+
 ## [1.0.1+6] - 21/2/2021.
 
 Update ChangeLog and Yaml description.
