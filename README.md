@@ -65,4 +65,4 @@ A Horizontal List view With Lots of modification including a scaled current item
 
 ## Contributers
 <a href="https://github.com/hosain-mohamed"> Hosain Mohamed</a>
-<a href="https://github.com/MuhammadAlsaied"> Muhammad Alsaied</a>
+<a href="https://github.com/MuhammadElsaeed"> Muhammad Alsaied</a>
